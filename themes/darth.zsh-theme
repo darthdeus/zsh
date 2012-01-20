@@ -42,6 +42,6 @@ grb_git_prompt() {
 #%{\e[0;%(?.32.31)m%}>%{\e[0m%} '
 
 #export PROMPT=" $fg[reset_color]$(project_pwd) $(grb_git_prompt)
-export PROMPT=" $fg[reset_color]$(project_pwd)
-> "
-export RPROMPT=$'%{$fg[bright_blue]%}$(project_pwd)$(ruby_version)$(git_cwd_info)%{\e[0m%}'
+export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
+~ "
+export RPROMPT=$'%$(ruby_version)$(git_cwd_info)%{\e[0m%}'
