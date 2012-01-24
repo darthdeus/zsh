@@ -44,4 +44,5 @@ grb_git_prompt() {
 #export PROMPT=" $fg[reset_color]$(project_pwd) $(grb_git_prompt)
 export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
 ~ "
-export RPROMPT=$'%$(ruby_version)$(git_cwd_info)%{\e[0m%}'
+export RPROMPT=$'%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%} $(git_cwd_info)%{\e[0m%}'
+
