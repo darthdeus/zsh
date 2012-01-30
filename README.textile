@@ -12,7 +12,9 @@ You can install this via the command line with either `curl` or `wget`.
 
 h4. via `curl`
 
-@curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh@
+Updated to use my own forked repository
+
+@curl -L https://github.com/darthdeus/oh-my-zsh/raw/master/tools/install.sh | sh@
 
 h4. via `wget`
 
