@@ -38,11 +38,19 @@ grb_git_prompt() {
 #    fi
 }
 
-#export PROMPT=$'%{\e[0;90m%}%n@%m%{\e[0m%}
-#%{\e[0;%(?.32.31)m%}>%{\e[0m%} '
 
-#export PROMPT=" $fg[reset_color]$(project_pwd) $(grb_git_prompt)
-export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
-~ "
-export RPROMPT=$'%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%} $(git_cwd_info)%{\e[0m%}'
+local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+
+PROMPT='
+%~
+${smiley}  %{$reset_color%}'
+
+# what is the `i v g` for rvm-prompt?
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+
+
+
+# export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
+# ~ "
+# export RPROMPT=$'%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%} $(git_cwd_info)%{\e[0m%}'
 
