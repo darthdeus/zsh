@@ -42,3 +42,7 @@ alias tf="tail -F"
 alias r="bundle exec rails"
 
 alias scvload="ssh li 'top -bn 1 | head -n 5'"
+
+function gdd() {
+  git diff $1..$1~
+}
