@@ -40,6 +40,7 @@ alias vagrant="nocorrect vagrant"
 alias tf="tail -F"
 
 alias r="bundle exec rails"
+alias rg="rvm gemset"
 
 alias scvload="ssh li 'top -bn 1 | head -n 5'"
 
