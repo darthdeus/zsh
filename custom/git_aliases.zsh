@@ -2,6 +2,8 @@ alias ga='git add'
 alias gap='ga -p'
 alias gau='git add -u'
 alias gbr='git branch -v'
+alias gb='gbr'
+alias gbt='gbrt'
 gc() {
   git diff --cached | grep '\btap[ph]\b' >/dev/null &&
     echo "\e[0;31;29mOops, there's a #tapp or similar in that diff.\e[0m" ||
