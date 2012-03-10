@@ -47,3 +47,6 @@ alias scvload="ssh li 'top -bn 1 | head -n 5'"
 function gdd() {
   git diff $1@{1}..$1
 }
+
+alias ta="tmux attach"
+alias tn="tmux new-session -s"

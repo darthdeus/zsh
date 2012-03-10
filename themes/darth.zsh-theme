@@ -39,12 +39,12 @@ grb_git_prompt() {
 }
 
 
-local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+# local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+local smiley="%(?,%{$fg[green]%}$%{$reset_color%},%{$fg[red]%}$%{$reset_color%})"
 
 local current_dir="%~"
-PROMPT='
-${current_dir} `grb_git_prompt`
-${smiley}  %{$reset_color%}'
+PROMPT='${current_dir} `grb_git_prompt`
+${smiley} %{$reset_color%}'
 
 # what is the `i v g` for rvm-prompt?
 RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
