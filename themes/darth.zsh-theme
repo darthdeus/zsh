@@ -23,26 +23,27 @@ function minutes_since_last_commit {
 grb_git_prompt() {
 #    local g="$(__gitdir)"
     local g=".git"
-#    if [ -n "$g" ]; then
+    if [ -d "$g" ]; then
         local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
         if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-            local COLOR=${RED}
+            local COLOR="$fg[red]"
         elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-            local COLOR=${YELLOW}
+            local COLOR="$fg[yellow]"
         else
-            local COLOR=${GREEN}
+            local COLOR="$fg[green]"
         fi
         local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         # The __git_ps1 function inserts the current git branch where %s is
         echo $SINCE_LAST_COMMIT
-#    fi
+    fi
 }
 
 
 local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
 
+local current_dir="%~"
 PROMPT='
-%~
+${current_dir} `grb_git_prompt`
 ${smiley}  %{$reset_color%}'
 
 # what is the `i v g` for rvm-prompt?
