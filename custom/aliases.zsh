@@ -48,5 +48,8 @@ function gdd() {
   git diff $1@{1}..$1
 }
 
+alias t="tmux"
 alias ta="tmux attach"
 alias tn="tmux new-session -s"
+
+alias cf="bundle exec cucumber features"

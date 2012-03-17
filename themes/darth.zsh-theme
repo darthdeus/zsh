@@ -50,7 +50,6 @@ ${smiley} %{$reset_color%}'
 RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
 
 
-
 # export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
 # ~ "
 # export RPROMPT=$'%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%} $(git_cwd_info)%{\e[0m%}'
