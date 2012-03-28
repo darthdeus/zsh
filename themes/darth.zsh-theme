@@ -47,7 +47,8 @@ PROMPT='${current_dir} `grb_git_prompt`
 ${smiley} %{$reset_color%}'
 
 # what is the `i v g` for rvm-prompt?
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+#RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info.rb)%{$reset_color%}'
 
 
 # export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)

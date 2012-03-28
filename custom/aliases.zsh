@@ -19,8 +19,6 @@ alias m='mate . $argv'
 alias reload_webkit="osascript -e \"tell application 'WebKit' to do JavaScript 'window.location.reload()' in front document\""
 #alias tigs='tig status $argv'
 
-alias rs="bundle exec rake spec"
-
 #alias add_alias='mate -w ~/.zsh/aliases; cd ~/.dot-files; ga files/.zsh/aliases; gc'
 #alias git_alias='mate -w ~/.zsh/git_aliases; cd ~/.dot-files; ga files/.zsh/git_aliases; gc'
 
@@ -52,4 +50,9 @@ alias t="tmux"
 alias ta="tmux attach"
 alias tn="tmux new-session -s"
 
+alias rs="bundle exec rspec spec"
 alias cf="bundle exec cucumber features"
+alias rb="rbenv"
+alias re="rb"
+alias rh="rbenv rehash"
+alias p="powder"
