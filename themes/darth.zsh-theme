@@ -1,16 +1,16 @@
-# Found on the ZshWiki
-#  http://zshwiki.org/home/config/prompt
-#
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
 
-#PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
-project_pwd() {
-  echo $PWD | sed -e "s/\/Users\/$USER/~/" -e "s/~\/projects\/\([^\/]*\)\/current/\\1/" -e "s/~\/Sites\/\([^\/]*\)\/current/http:\/\/\\1/"
+function current_commit() {
+  echo $(git rev-parse --short HEAD 2>/dev/null)
 }
 
 ruby_version() {
   echo " $(ruby -v | awk '{print $2}')"
 }
-#
+
 # ACTUAL CUSTOMIZATION OH NOES!
 function minutes_since_last_commit {
     now=`date +%s`
@@ -43,12 +43,13 @@ grb_git_prompt() {
 local smiley="%(?,%{$fg[green]%}$%{$reset_color%},%{$fg[red]%}$%{$reset_color%})"
 
 local current_dir="%~"
-PROMPT='${current_dir} `grb_git_prompt`
+# PROMPT='${current_dir}
+PROMPT='${current_dir}
 ${smiley} %{$reset_color%}'
 
-# what is the `i v g` for rvm-prompt?
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
-#RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info.rb)%{$reset_color%}'
+# RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} %{$fg[blue]%}$(current_branch)@%{$fg[yellow]%}$(current_commit) %{$reset_color%}'
+# RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info.rb)%{$reset_color%}'
 
 
 # export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)

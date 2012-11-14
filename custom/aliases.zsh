@@ -56,3 +56,13 @@ alias rb="rbenv"
 alias re="rb"
 alias rh="rbenv rehash"
 alias p="powder"
+
+alias b="bundle"
+alias bi="bundle install"
+
+alias time="gtime"
+alias wisdom="fortune | cowsay | lolcat"
+alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xargs) app lib'
+
+# alias git=hub
+alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
