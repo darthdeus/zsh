@@ -44,7 +44,9 @@ at_sign() {
 local smiley="%(?,%{$fg[green]%}$%{$reset_color%},%{$fg[red]%}$%{$reset_color%})"
 
 local current_dir="%~"
-PROMPT='${current_dir}
+
+# PROMPT='${current_dir}
+PROMPT='%{$fg[blue]%}${current_dir}
 ${smiley} %{$reset_color%}'
 
 RPROMPT='%{$fg[white]%} %{$fg[blue]%}$(current_branch)$(at_sign)%{$fg[yellow]%}$(current_commit) %{$reset_color%}'
