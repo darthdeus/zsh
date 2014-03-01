@@ -21,7 +21,6 @@ function minutes_since_last_commit {
 }
 
 grb_git_prompt() {
-#    local g="$(__gitdir)"
     local g=".git"
     if [ -d "$g" ]; then
         local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
@@ -38,21 +37,14 @@ grb_git_prompt() {
     fi
 }
 
+at_sign() {
+  git rev-parse --git-dir > /dev/null 2>&1 && echo "@"
+}
 
-# local smiley="%(?,%{$fg[green]%}☺%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
 local smiley="%(?,%{$fg[green]%}$%{$reset_color%},%{$fg[red]%}$%{$reset_color%})"
 
 local current_dir="%~"
-# PROMPT='${current_dir}
 PROMPT='${current_dir}
 ${smiley} %{$reset_color%}'
 
-# RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt i v g)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
-RPROMPT='%{$fg[white]%} %{$fg[blue]%}$(current_branch)@%{$fg[yellow]%}$(current_commit) %{$reset_color%}'
-# RPROMPT='%{$fg[white]%} $(~/bin/git-cwd-info.rb)%{$reset_color%}'
-
-
-# export PROMPT="$fg[reset_color]macbook: %~   $(git_prompt_info)
-# ~ "
-# export RPROMPT=$'%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%} $(git_cwd_info)%{\e[0m%}'
-
+RPROMPT='%{$fg[white]%} %{$fg[blue]%}$(current_branch)$(at_sign)%{$fg[yellow]%}$(current_commit) %{$reset_color%}'
