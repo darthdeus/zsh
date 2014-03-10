@@ -66,3 +66,5 @@ alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xarg
 
 # alias git=hub
 alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
+
+alias c1="clang++ --std=c++11"
