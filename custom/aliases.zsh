@@ -68,4 +68,16 @@ alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xarg
 # alias git=hub
 alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
 
-alias c1="clang++ --std=c++11"
+alias c1="clang++ -std=c++11 -stdlib=libc++"
+
+function pgdisc() {
+  echo "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();" > psql postgres
+}
+
+function z() {
+  if [ -S .zeus.sock ]; then
+    echo "Zeus is already running"
+  else
+    zeus start
+  fi
+}
