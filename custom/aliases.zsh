@@ -70,6 +70,11 @@ alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 
 
 alias c1="clang++ -std=c++11 -stdlib=libc++"
 
+alias c="cabal"
+alias ci="cabal install"
+alias cid="cabal install --only-dependencies"
+alias cu="cabal update"
+
 function pgdisc() {
   echo "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = current_database() AND pid <> pg_backend_pid();" > psql postgres
 }
