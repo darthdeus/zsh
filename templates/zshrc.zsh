@@ -36,6 +36,8 @@ source $ZSH/oh-my-zsh.sh
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
+PATH="$HOME/.cabal/bin:$PATH"
+
 #PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [[ -f "$HOME/.amazon_keys" ]]; then
