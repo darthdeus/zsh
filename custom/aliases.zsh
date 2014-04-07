@@ -56,7 +56,7 @@ alias cf="bundle exec cucumber features"
 alias rb="rbenv"
 alias re="rb"
 alias rh="rbenv rehash"
-alias p="powder"
+alias p="sudo -Hiu postgres psql"
 
 alias b="bundle"
 alias bi="bundle install"
