@@ -61,7 +61,6 @@ alias p="sudo -Hiu postgres psql"
 alias b="bundle"
 alias bi="bundle install"
 
-alias time="gtime"
 alias wisdom="fortune | cowsay | lolcat"
 alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xargs) app lib'
 

@@ -15,7 +15,7 @@ ZSH_THEME="darth"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -29,7 +29,7 @@ ZSH_THEME="darth"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rbenv)
+plugins=(rbenv docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,6 +44,7 @@ if [[ -f "$HOME/.amazon_keys" ]]; then
   source "$HOME/.amazon_keys";
 fi
 
+export EDITOR="vim"
 
 #export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 
@@ -51,3 +52,6 @@ if [[ -d "$HOME/.ec2" ]]; then
   export EC2_PRIVATE_KEY="$(ls $HOME/.ec2/pk-*.pem)"
   export EC2_CERT="$(ls $HOME/.ec2/cert-*.pem)"
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
