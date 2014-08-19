@@ -40,10 +40,6 @@ source $ZSH/oh-my-zsh.sh
 
 #PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-if [[ -f "$HOME/.amazon_keys" ]]; then
-  source "$HOME/.amazon_keys";
-fi
-
 export EDITOR="vim"
 
 #export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
