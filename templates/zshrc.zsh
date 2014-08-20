@@ -42,7 +42,6 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="vim"
 
-#export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 
 if [[ -d "$HOME/.ec2" ]]; then
   export EC2_PRIVATE_KEY="$(ls $HOME/.ec2/pk-*.pem)"
