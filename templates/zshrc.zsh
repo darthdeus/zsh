@@ -43,9 +43,11 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="vim"
 
 
-if [[ -d "$HOME/.ec2" ]]; then
-  export EC2_PRIVATE_KEY="$(ls $HOME/.ec2/pk-*.pem)"
-  export EC2_CERT="$(ls $HOME/.ec2/cert-*.pem)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
 ### Added by the Heroku Toolbelt
