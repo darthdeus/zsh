@@ -19,9 +19,6 @@ alias m='mate . $argv'
 alias reload_webkit="osascript -e \"tell application 'WebKit' to do JavaScript 'window.location.reload()' in front document\""
 #alias tigs='tig status $argv'
 
-#alias add_alias='mate -w ~/.zsh/aliases; cd ~/.dot-files; ga files/.zsh/aliases; gc'
-#alias git_alias='mate -w ~/.zsh/git_aliases; cd ~/.dot-files; ga files/.zsh/git_aliases; gc'
-
 # IP related stuff
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias flush="dscacheutil -flushcache"
