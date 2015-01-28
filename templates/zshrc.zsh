@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # PATH="$HOME/.cabal/bin:$PATH"
 
-#PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export EDITOR="vim"
 
@@ -50,9 +50,9 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
-
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-# $HOME/projects/base16-shell/base16-tomorrow.dark.sh
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+
+# OPAM configuration
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

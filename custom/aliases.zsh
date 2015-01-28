@@ -38,6 +38,7 @@ alias r="bundle exec rails"
 alias rg="rvm gemset"
 
 alias scvload="ssh li 'top -bn 1 | head -n 5'"
+alias kapow="touch tmp/restart.txt"
 
 function gdd() {
   git diff $1@{1}..$1
@@ -53,7 +54,8 @@ alias cf="bundle exec cucumber features"
 alias rb="rbenv"
 alias re="rb"
 alias rh="rbenv rehash"
-alias p="sudo -Hiu postgres psql"
+# alias p="sudo -Hiu postgres psql"
+alias p="powder"
 
 alias b="bundle"
 alias bi="bundle install"
