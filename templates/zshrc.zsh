@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # PATH="$HOME/.cabal/bin:$PATH"
 
-PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="$HOME/Qt/5.4/clang_64/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export EDITOR="vim"
 
