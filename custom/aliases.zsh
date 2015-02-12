@@ -86,3 +86,4 @@ function z() {
   fi
 }
 
+alias nh="node --harmony"
