@@ -1,6 +1,6 @@
-# The one true `~/.zshrc`
+# My `~/.zshrc`
 
-# Installation
+To install simply do the following:
 
-- Clone the repo
-- `ln -s ~/.oh-my-zsh/zshrc.zsh ~/.zshrc`
+    git clone git@github.com:darthdeus/zshrc.git ~/.oh-my-zsd
+    ln -s ~/.oh-my-zsh/zshrc.zsh ~/.zshrc
