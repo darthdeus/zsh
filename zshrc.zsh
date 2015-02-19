@@ -10,9 +10,6 @@ ZSH_THEME="darth"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
-
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
 
@@ -28,11 +25,6 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(rbenv pow)
 
 source $ZSH/oh-my-zsh.sh
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-
-# PATH="$HOME/.cabal/bin:$PATH"
 
 PATH="$HOME/Qt/5.4/clang_64/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
