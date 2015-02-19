@@ -3,4 +3,4 @@
 # Installation
 
 - Clone the repo
-- `ln -s ~/.oh-my-zsh/templates/zshrc.zsh ~/.zshrc`
+- `ln -s ~/.oh-my-zsh/zshrc.zsh ~/.zshrc`
