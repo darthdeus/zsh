@@ -63,7 +63,6 @@ alias bi="bundle install"
 alias wisdom="fortune | cowsay | lolcat"
 alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xargs) app lib'
 
-# alias git=hub
 alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
 
 alias c1="clang++ -std=c++11 -stdlib=libc++"
