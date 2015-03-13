@@ -1,33 +1,30 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="darth"
+# history config
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+# disable the annoying beep
+unsetopt beep
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+# emacs style keybindings
+bindkey -e
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Load all of the config files in ~/oh-my-zsh that end in .zsh
+# TIP: Add files you don't want in git to .gitignore
+for config_file ($ZSH/lib/*.zsh) source $config_file
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+# completion settings
+# zstyle :compinstall filename '/Users/darth/.zshrc'
+autoload -Uz compinit
+compinit
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rbenv)
+# color theme
+source $ZSH/themes/darth.zsh-theme
 
-source $ZSH/oh-my-zsh.sh
 
 PATH="$HOME/Qt/5.4/clang_64/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-
 export EDITOR="vim"
 
 
@@ -44,3 +41,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 
 # OPAM configuration
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+source $ZSH/custom/aliases.zsh
+source $ZSH/custom/git_aliases.zsh
