@@ -49,6 +49,7 @@ alias t="tmux"
 alias ta="tmux attach"
 alias tn="tmux new-session -s"
 
+alias be="bundle exec"
 alias rs="bundle exec rspec spec"
 alias cf="bundle exec cucumber features"
 alias rb="rbenv"
