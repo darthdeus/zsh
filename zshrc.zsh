@@ -27,7 +27,7 @@ source $ZSH/themes/darth.zsh-theme
 PATH="$HOME/Qt/5.4/clang_64/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR="vim"
 
-
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
