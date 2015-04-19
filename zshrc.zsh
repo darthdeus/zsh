@@ -11,8 +11,7 @@ unsetopt beep
 # emacs style keybindings
 bindkey -e
 
-# Load all of the config files in ~/oh-my-zsh that end in .zsh
-# TIP: Add files you don't want in git to .gitignore
+# Load all libs under
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
 # completion settings
