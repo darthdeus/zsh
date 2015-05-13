@@ -65,6 +65,7 @@ alias wisdom="fortune | cowsay | lolcat"
 alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xargs) app lib'
 
 alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
+alias ni="node-inspector --hidden='node_modules' --hidden='node.js' --no-preload"
 
 alias c1="clang++ -std=c++11 -stdlib=libc++"
 
