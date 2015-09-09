@@ -88,3 +88,7 @@ function z() {
 }
 
 alias nh="node --harmony"
+
+alias pi="sudo pacman -S"
+alias pe="pacman -Ss"
+alias pq="pacman -Ssq"
