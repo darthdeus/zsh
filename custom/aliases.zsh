@@ -66,6 +66,7 @@ alias ct='ctags --extra=+f --language-force=Ruby -R $(bundle show --paths | xarg
 
 alias md='kill -s USR1 $(ps -ef | grep main.js | grep node | tr -s " " | cut -f 4 -d " ")'
 alias ni="node-inspector --hidden='node_modules' --hidden='node.js' --no-preload"
+alias im="iex -S mix"
 
 alias c1="clang++ -std=c++11 -stdlib=libc++"
 
