@@ -22,6 +22,10 @@ compinit
 # color theme
 source $ZSH/themes/darth.zsh-theme
 
+PATH="$HOME/opt/cross/bin:$PATH"
+PATH="$HOME/projects/depot_tools:$PATH"
+PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
 export EDITOR="vim"
 
 PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
