@@ -101,3 +101,7 @@ function switch-gcc-osx() {
   export CPP="/usr/local/bin/cpp-$VERSION"
   export LD="/usr/local/bin/gcc-$VERSION"
 }
+
+if ! type open 2>&1 1>/dev/null; then
+  alias open="exo-open"
+fi
